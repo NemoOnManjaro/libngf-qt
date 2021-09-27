@@ -5,13 +5,13 @@
 
 pkgname=qt5-ngfd-git
 _pkgname=libngf-qt-git
-pkgver=0.7.0.r0.gac87734
+pkgver=0.8.1.r0.ga637387
 pkgrel=1
 pkgdesc="Qt-based client library for Non-Graphic Feedback daemon"
 arch=('x86_64' 'aarch64')
 url="https://github.com/sailfishos/libngf-qt"
 license=('GPL')
-depends=('qt5-declarative' 'libngf')
+depends=('qt5-declarative' 'libngf' 'qt5-feedback')
 makedepends=('git')
 provides=("${_pkgname%-git}" "${pkgname%-git}")
 conflicts=("${_pkgname%-git}" "${pkgname%-git}")
