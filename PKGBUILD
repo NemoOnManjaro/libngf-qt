@@ -14,14 +14,17 @@ license=('GPL')
 depends=('qt6-declarative' 'libngf' 'qt6-feedback')
 source=("${url}/archive/refs/tags/$pkgver.tar.gz"
     '0001-Fixup-build-with-qt6.patch'
+    '0002-Fixup-build-with-qt6.8.patch'
 )
 sha256sums=('5896647c64463e1b4be5bcc84e915dd1e73644e65419aa82ed41bb759e39bb4a'
     '46b74fb8554785e37f2b74c164af3c65b9c0f86912803b5c4994bdaa94a1750a'
+    'e11a1666dfaef8a62a00eea7177e1e2098f2286e802277bbd76cd94b208c7af5'
 )
 
 prepare() {
     cd libngf-qt-$pkgver
     patch -p1 --input="${srcdir}/0001-Fixup-build-with-qt6.patch"
+    patch -p1 --input="${srcdir}/0002-Fixup-build-with-qt6.8.patch"
 }
 
 build() {
